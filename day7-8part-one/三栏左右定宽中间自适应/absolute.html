@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute</title>
+	<style>
+.wrap{
+position:relative;
+width:80%;
+margin:0 auto;
+min-width:600px;
+	
+}
+
+.left{
+	position:absolute;
+	top:0;
+	left:0;
+	width:200px;
+	height:600px;
+	background-color: pink;
+}
+.right{
+	position:absolute;
+	top:0;
+	right:0;
+	width:200px;
+	height:600px;
+	background-color: red;
+}
+.main{
+
+	position:absolute;
+	top:0;
+	left:200px;
+	width:calc( 100% - 400px);
+	min-width: 200px;
+	height:600px;
+	background-color: green;
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+	<aside class="left">#left</aside>
+	<section class="main">#middle</section>
+	<aside class="right">#right</aside>
+	
+</div>
+</body>
+</html>

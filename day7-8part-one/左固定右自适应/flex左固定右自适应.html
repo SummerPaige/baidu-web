@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float+BFC</title>
+	<style>
+     .wrap{
+      display:flex;
+      align-items: flex-start;/*顶部对齐*/
+      border:1px dashed red;
+   
+     }
+     .left{
+      width:200px;
+      flex:0 0 auto;
+      /*flex的项目设置，flex是如下三个的缩写flex: flex-grow（项目放大比例，默认值0） flex-shrink（项目缩小比例 ，默认值1）  flex-basis（默认值auto） */
+      background: red;
+     }
+
+     .right{
+     flex:1 1 auto;
+     background: yellow;
+     
+     	     }
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="left">左 自适应</div>
+		<div class="right">右 固定</div>
+	</div>
+</body>
+</html>

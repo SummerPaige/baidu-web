@@ -1,0 +1,92 @@
+body{
+	width:700px;
+	position:relative;
+}
+ul{
+	list-style-type: none;
+}
+.title{
+	margin-bottom: 0;
+}
+.content{
+	margin: 0;
+}
+li p:nth-of-type(1){
+	font-weight: bold;
+}
+h2{
+	width:100%;
+	height:50px;
+	background:grey ;
+	color:white;
+	margin:0;
+	border-right: 2px solid yellow;
+
+}
+
+h3{
+width:100px;
+height:100px;
+margin:0;
+background: #9e9e9eab;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+border-bottom: 2px solid yellow;
+
+}
+table{
+
+width:602px; /*为怪异模式，故宽为102=content+padding+border:*/
+height:102px;/*代码写的是102，但是检查工具的图显示高度度为100？*//*因为怪异模式*/
+margin:0;
+padding: 0;
+border-bottom: 2px solid yellow;
+border-right: 2px solid yellow;
+
+}
+
+ul{
+width:600px;
+height:100px;
+margin:0;
+padding: 0;
+border-bottom: 2px solid yellow;
+border-right: 2px solid yellow;
+
+}
+
+#infolist{
+background: white;
+position:absolute;
+right:-2px;/*怪异模式的原因*/
+top:50px;
+}
+#contactlist{
+background: white;
+position:absolute;
+right:-2px;
+top:152px;
+}
+#ability{
+background: white;
+position:absolute;
+right:0;
+top:254px;	
+}
+p{
+display:inline;
+}
+
+#education{
+background: white;
+position:absolute;
+right:0;
+top:356px;	
+}
+#project{
+background: white;
+position:absolute;
+right:0;
+top:458px;	
+}

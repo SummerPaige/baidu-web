@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute+margin-left</title>
+	<style>
+     .wrap{
+      position :relative;
+      border:2px dashed red;
+      min-height:300px;/*当左侧盒子的高度>右侧时，会超出父容器高度，所以要给父元素设置最小高度。*/
+   
+     }
+     .left{
+       position: absolute;
+     	width:200px;
+     	height:300px;
+     	background: yellow;
+     }
+     .right{
+     	background: pink;
+     	margin-left: 200px;
+     	height:300px; /*高度是内容撑开，也可以自己设置。*/
+     	 /*不设置宽度，利用block元素的宽度填满父容器，并随着父容器的宽度自适应的流动特性。
+     	block级别的元素会认为浮动的元素不存在，但是inline级别的元素能识别到浮动的元素。*/
+     }
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="left">左边宽度固定，高度不定</div>
+		<div class="right">右边自适应，高度不定</div>
+	</div>
+</body>
+</html>

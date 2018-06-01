@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute+margin-right</title>
+	<style>
+.wrap{
+position:relative;
+width:80%;
+margin:0 auto;
+} 
+
+.left{
+    width:calc(100% - 200px);
+    height:600px;
+    margin-right: 200px;
+    background-color: yellow;
+
+}
+
+
+.right{
+position:absolute;
+top:0;
+right:0;
+width:200px;
+height:600px;
+background-color: pink;
+}
+</style>
+</head>
+<body>
+	<div class="wrap ">
+        <div class="right">right 固定 </div><!--把right放在前面-->
+		<div class="left"> left自适应</div>
+
+		
+	</div>
+</body>
+</html>

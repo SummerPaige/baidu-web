@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双float</title>
+	<style>
+.wrap{
+    box-sizing: content-box;
+    margin:0 auto;
+    width:80%;
+    border: solid red 1px;	
+    }
+.clearfix:after{
+    content:"";
+    display:table;
+    clear:both;
+
+    }
+.clearfix{
+        zoom:1;/*兼容低版本IE*/
+    }
+ .left{
+    box-sizing: border-box;
+    float:left;
+    width:calc(100% - 200px);
+    height: 600px;;
+    background-color: yellow;
+
+    }
+
+ .right{
+    box-sizing: border-box;
+    float:right;
+    width:200px;
+    height:600px;
+    background-color: pink;
+    }
+ 
+    </style>
+</head>
+<body>
+	<div class="wrap clearfix">
+		<div class="left"> left自适应</div>
+		<div class="right">right 固定 </div>
+	</div>
+</body>
+</html>

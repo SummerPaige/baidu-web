@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float+BFC</title>
+	<style>
+.wrap{
+overflow: auto;
+width:80%;
+margin:0 auto;
+} 
+
+.left{
+overflow: auto;
+height:600px;
+background-color: yellow;
+}
+
+
+.right{
+float:right;
+width:200px;
+height:600px;
+background-color: pink;
+}
+</style>
+</head>
+<body>
+	<div class="wrap ">
+        <div class="right">right 固定 </div><!--把right放在前面-->
+		<div class="left"> left自适应</div>
+
+		
+	</div>
+</body>
+</html>

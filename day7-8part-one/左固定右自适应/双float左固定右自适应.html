@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双float</title>
+	<style>
+     .wrap{
+      box-sizing: content-box;
+      border:2px dashed red;
+      overflow: auto;/* 父元素清除浮动*/
+     }
+     .left{
+     	float:left;
+     	box-sizing: border-box;
+     	width:200px;
+     	background: yellow;
+     }
+     .right{
+     	float:left;
+     	box-sizing: border-box;
+     	width:calc(100% - 200px);
+     	background: pink;
+     }
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="left">左边宽度固定，高度不定</div>
+		<div class="right">右边自适应，高度不定</div>
+	</div>
+</body>
+</html>

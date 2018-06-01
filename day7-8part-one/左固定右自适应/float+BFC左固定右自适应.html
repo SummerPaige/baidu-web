@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float+BFC</title>
+	<style>
+     .wrap{
+      overflow: auto;/*清除浮动*/
+      border:1px dashed red;
+   
+     }
+     .left{
+      float:left;
+      width:200px;/*固定宽度200px*/
+      background: red;
+     }
+     .right{
+     background: yellow;
+     overflow: auto;/*形成BFC，此时不会与左边盒子重叠，代替了margin-left的作用。*/
+     	
+     }
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="left">左边宽度固定，高度不定</div>
+		<div class="right">右边自适应，高度不定</div>
+	</div>
+</body>
+</html>

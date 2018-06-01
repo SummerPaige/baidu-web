@@ -1,0 +1,22 @@
+body{
+	margin-left:20px;
+
+}
+table td {
+  padding-left:5px;
+  padding-right: 35px;
+}
+
+ul{
+	list-style-type: none;
+	text-indent: -40px;	
+}
+.title{
+	margin-bottom: 0;
+}
+.content{
+	margin: 0;
+}
+li p:nth-of-type(1){
+	font-weight: bold;
+}

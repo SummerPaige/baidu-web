@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>absolute</title>
+	<style>
+     
+     .wrap{
+     	display:flex;
+          width:80%;
+          
+          margin:0 auto;
+     }
+     #left{
+     	flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 200px;
+          height:600px; 
+          background-color: pink;
+     }
+     #main{
+          
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: 200px;
+          height:600px;
+          background-color: red;
+     }
+     #right{
+          
+          flex-grow: 0;
+          flex-shrink: 0;
+          flex-basis: calc(100% - 400px);
+          min-width: 200px;
+          height:600px;
+          background-color: green;	
+     }
+     
+     
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<aside id="left">#left</aside>
+	<section id="main">#middle</section>
+     <aside id="right">#right</aside>
+	
+</div>
+	
+</body>
+</html>

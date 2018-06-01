@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>float+margin-left</title>
+	<style>
+     .wrap{
+      overflow:hidden;
+      border:2px dashed red;
+   
+     }
+     .left{
+     	float:left;
+     	width:200px;
+     	background: yellow;
+     }
+     .right{
+     	background: pink;
+        margin-left: 210px;/*设置为210是为了留出10px的空格.这个地方可以发现，当我们不设置的margin-left的时候，黄色依然没有盖住粉色的字，因为字和图片会围绕浮动元素啊！！！*/
+        
+     	/*不设置宽度，利用block元素的宽度填满父容器，并随着父容器的宽度自适应的流动特性。
+     	block级别的元素会认为浮动的元素不存在，但是inline级别的元素能识别到浮动的元素。*/
+     }
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="left">左边宽度固定，高度不定</div>
+		<div class="right">右边自适应，高度不定</div>
+	</div>
+</body>
+</html>

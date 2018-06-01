@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右浮动 中间静态</title>
+	<style>
+     body{
+     	font-size:20px;
+     	text-align: center;
+     }
+     .wrap{
+     	margin:0px auto;
+     	width:1200px;
+     }
+     #left{
+     	float:left;
+     	width:200px;
+     	height:500px;
+     	background: green;
+     }
+     #right{
+     	float:right;
+     	width:200px;
+     	height:500px;
+     	background:yellow;
+     }
+     #main{
+     	width:800px;
+     	height:500px;
+     	background:pink;
+     	margin:0 200px;
+     }
+     
+
+	</style>
+</head>
+<body>
+<div class="wrap">
+	<aside id="left">#left</aside>
+	<aside id="right">#right</aside>
+	<section id="main">#middle</section>
+	
+</div>
+	
+</body>
+</html>

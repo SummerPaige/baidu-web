@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>淘宝双飞翼</title>
+	<style>
+     .wrap{
+     	width:100%;
+     	margin:0 auto;
+     }
+     .main-wrap{
+     	float:left;/*让容器左浮动，宽度跟父容器一样*/
+     	width:100%;
+     	
+     }
+     .main{
+     	height:500px;
+     	background:yellow;
+     	margin:0 100px;/*margin左右两边，让出left和right的宽度*/
+     	
+     }
+      .left{
+      	float:left;
+      	width:100px;
+      	height:500px;
+      	background: red;
+      	margin-left:-100%;/*负的父元素的宽度，相当于左移动*/
+      }
+      .right{
+      	float:left;
+      	width:100px;
+      	height:500px;
+      	background: blue;
+      	margin-left:-100px;/*负的自身宽度*/
+
+      }
+
+      
+	</style>
+</head>
+<body>
+	<div class="wrap">
+	<div  class="main-wrap">
+		<div class="main">中间</div> <!--中间写在最前面，并且外面有一个容器-->
+	</div>
+	
+
+	
+	<div class="left">左边</div>
+	<div class="right">右边</div>
+		
+	</div>
+</body>
+</html>

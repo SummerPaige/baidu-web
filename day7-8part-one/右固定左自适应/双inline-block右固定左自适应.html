@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>双inline-block</title>
+	<style>
+	.wrap{
+		
+		box-sizing: content-box;
+		width:80%;
+		margin:0 auto;
+    }
+    .left{
+    	display:inline-block;
+    	width:calc(100% - 200px);
+    	height:600px;
+    	background-color: pink;
+    	box-sizing: border-box;
+
+    }
+    .right{
+    	display:inline-block;
+    	width:200px;
+    	height:600px;
+    	background:yellow;
+    	box-sizing: border-box;
+    }
+ 
+    </style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="left">left 自适应</div><!--也可以在wrap里面设置font-size:0;来消除div之间的空格
+		--><div class="right">right 固定 </div>
+	</div>
+</body>
+</html>

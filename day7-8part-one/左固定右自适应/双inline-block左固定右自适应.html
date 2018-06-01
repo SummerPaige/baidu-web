@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左固定右适应-双inline-block</title>
+	<style>
+ .wrap{
+    font-size:0px;/*通过设置父元素字体大小为0；来消除div之间的空格。或者通过注释,<div>wwww</div><!--  --><div> wwww</div>*/
+ 	padding: 20px;
+ 	border:2px dashed red;
+ 	box-sizing: content-box;/*父元素是content-box模式*，为了计算右侧盒子的宽度，我们把子元素设置为border-box模式，这样宽度就是整个盒子的宽度了。*/
+ }
+
+ .left{
+ 	box-sizing: border-box;
+ 	display:inline-block;/*两个子元素都设置为inline-block*/
+ 	 vertical-align: top; /*两个inline-block的盒子，必须两个子元素都顶端对齐？？？为什么？？*/
+ 	background: green;
+ 	width:200px;
+ 	height:500px;
+ 	border:1px solid yellow;
+ 	 }
+
+
+ .right{
+ 	box-sizing: border-box;
+ 	display:inline-block;
+ 	 vertical-align: top; 
+ 	width:-webkit-calc(100% - 200px);/*减号前后要有空格，否则无效，减去的宽度必须计算清楚*/
+ 	height:200px;
+ 	background: yellow;
+ 	border:1px solid pink;
+
+ 	 }
+
+
+	</style>
+</head>
+<body>
+	<div class="wrap" id="wrap">
+		<div class="left">左边宽度固定，高度不定</div>
+		<div class="right">右边自适应，高度不定</div>
+	</div>
+
+</body>
+</html>
