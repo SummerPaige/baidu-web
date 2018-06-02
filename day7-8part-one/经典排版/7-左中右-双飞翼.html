@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右两边不变，中间自适应</title>
+	<style>
+    body{
+    	font-size: 20px;
+    	text-align: center;
+    }
+    .wrap{
+    	margin:0 auto;
+    	width:100%;
+     }
+     #midcontainer{
+     	width:100%;
+     	float:left;
+     }
+     #main{
+     	height:500px;
+     	background: pink;
+     	margin:0 200px;
+
+     }
+     #left{
+     	float:left;
+     	width:200px;
+     	height:500px;
+     	background: yellow;
+     	margin-left: -100%;/*看检查图就明白了，往左移动了父元素的宽度。*/
+
+     }
+     #right{
+     	float:left;
+     	width:200px;
+     	height:500px;
+     	background: yellow;
+     	margin-left:-200px;
+     	
+     }
+    
+	</style>
+</head>
+<body>
+<div class="wrap">
+
+    <div id="midcontainer">
+		<section id="main">#middle</section>
+	</div>
+	<aside id="left">#left</aside>
+	<aside id="right">#right</aside>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右两栏-纯浮动</title>
+	<style>
+	body{
+      font-size: 20px;
+      text-align: center;
+	}
+	.wrap{
+	  margin:0 auto;
+	  width:900px;
+
+	.clearfix:after{
+		content:"";
+		display: block;
+		clear:both;
+		overflow: hidden;
+
+	}
+	}
+	#left{
+		float:left;
+		background: yellow;
+		width:200px;
+		height:500px;
+	}
+	#right{
+		float:right;
+		background: blue;
+		width:700px;
+		height:500px;
+	}
+	</style>
+</head>
+<body>
+<div class="wrap clearfix">
+	<aside id="left">left</aside>
+	<section id="right">main</section>
+</div>	
+</body>
+</html>

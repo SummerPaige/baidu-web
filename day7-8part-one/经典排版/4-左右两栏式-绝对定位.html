@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>绝对定位</title>
+	<style>
+	body{
+		font-size:20px;
+		text-align: center;
+	}
+	.wrap{
+		margin:0 auto;
+		width:900px；
+		position:relative;
+	}
+	#left{
+		width:200px;
+		height:300px;
+		background: yellow;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+	#right{
+		width:700px;,
+		background: blue;
+		position: absolute;
+		top:0;
+		right: 0px;
+	}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<aside id="left">left</aside>
+		<section id="right">right</section>
+	</div>
+</body>
+</html>
+	

@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>圣杯</title>
+  <style>
+  .wrap{
+  padding:0 200px;
+  }
+  .left{
+    position:relative;/*相对于自身的位置便宜*/
+    left:-200px;
+    float:left;
+    width:200px;
+    background: yellow;
+    min-height:300px;
+    margin-left: -100%;/*设置父边距，让left在最左边*/
+
+  }
+  .main{
+    float:left;
+    width:100%;/*设置宽度和父容器一样，独占一行，把left和right挤到下面*/
+    background: pink;
+    min-height: 300px;
+  }
+  .right{
+    position:relative;/*不加相对定位时，left和right都在main的上层，有遮盖。圣杯和双飞翼的区别在于怎么解决遮盖问题*/
+    left:200px;/*或者right：-200px*/
+    float:left;
+    width:200px;
+    background: green;
+    min-height:300px;
+    margin-left: -200px;/*负的自身宽度，让它在右边*/
+  }
+
+  </style>
+  
+
+  
+</head>
+<body>
+<div class="wrap"> <!--外面必须有个父容器-->            
+  <div class="main">#main</div>  <!--main一定在最前面，优先加载-->
+  <div class="left">#left</div>
+  <div class="right">#right</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>左右+页眉页脚</title>
+	<style>
+	body{
+		font-size:20px;
+		text-align: center;
+		
+	}
+	.wrap{
+		margin:0 auto;
+		width:900px;
+	}
+	#header{
+		height:100px;
+		background: blue;
+	}
+     #main{
+        height:500px;
+        background: pink;
+     }
+     #footer{
+     	height:100px;
+     	background: blue;
+     }
+     #middle{
+     	width:100%;/*浮动元素由内容撑开，没有内容的时候要给宽度，否则为0；后面的content给了height*/
+     	float:left;
+     }
+     #left{
+     	width:200px;
+     	height:100%;
+     	background: yellow;
+     	float:left;
+     	margin-left: -100%;
+     }
+     #right{
+     	width:200px;
+     	height:100%;
+     	background: yellow;
+     	float:left;
+     	margin-left: -200px;
+     }
+     .content{
+     	height:500px;
+     	margin:0 200px;
+     	margin:0 200px;
+     	
+     }
+     
+	</style>
+</head>
+<body>
+	<header id="header" class="wrap">#header</header>
+
+	<section id="main" class="wrap">
+
+	<section id="middle">
+	<div class="content">#content</div>
+	</section>
+
+	<aside id="left">left</aside>
+	<aside id="right">right</aside>
+
+	</section>
+
+	<footer id="footer" class="wrap">#footer</footer>
+</body>
+</html>

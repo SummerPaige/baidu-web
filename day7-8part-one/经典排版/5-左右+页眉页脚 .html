@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+     body{
+     	font-size: 20px;
+     	text-align: center;
+     }
+     .wrap{
+     	margin:0 auto;
+     	width:1200px;
+
+
+     }
+     #header{
+     	height:100px;
+     	background: blue;
+     }
+     #section{
+     	height:500px;
+     	background: pink;
+     	overflow: hidden;
+     }
+     #footer{
+     	height:100px;
+     	background: yellow;
+     }
+     #left{
+     	width:200px;
+     	height:500px;
+     	float:left;
+     	background:grey;
+     }
+     #right{
+     	height:500px;
+     	background:red;
+     	margin-left: 200px;
+     }
+	</style>
+</head>
+<body>
+	<header id="header" class="wrap">header</header>	
+	<section id="section" class="wrap">
+		<aside id="left">aside</aside>
+		<article id="right">main</article>
+	</section>
+	<footer id="footer" class="wrap">footer</footer>
+</body>
+</html>
