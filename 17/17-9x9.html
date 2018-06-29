@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<style>
+    table{border-collapse: collapse;}
+	td{
+		border:1px solid black;
+		
+	}
+</style>
+
+<body>
+<script>
+	window.onload=function(){
+	var oBtn=document.createElement('button');
+	oBtn.innerHTML="显示乘法表";
+	document.body.appendChild(oBtn);
+	oBtn.onclick=function(){
+
+     var Table=document.createElement('table');
+     Table.setAttribute('id','nine-table');
+
+     for (var row = 0; row < 9; row++) {
+     	var Tr= document.createElement('tr');
+     	   for (var col = 0; col<=row ; col++) {
+             var Td=document.createElement('td');
+             Td.innerHTML=col+'x'+row+'='+col*row;
+            Tr.appendChild(Td); 
+     	   }
+     	Table.appendChild(Tr);
+     	 }
+    document.body.appendChild(Table);
+}
+
+	}
+
+</script>
+	
+</body>
+</html>
