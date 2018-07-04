@@ -1,0 +1,144 @@
+<html>
+ <body bgcolor=lightcyan text=red>
+<h1> <font color=blue> 示范网页 </font> </h1> <p> </br>
+<hr>
+<form>
+<input type="button" value="在状态列显示文字" >
+</form>
+<input type="text" id="box">
+<hr>
+<p>你在本网页停留时间：</p>
+<input type="text" id="min"><span>mins</span>
+<input type="text" id="sec"><span> secs </span>
+<hr>
+<p>清除定时器</p>
+<input type="text" id="m"><span>mins</span>
+<button id="one">继续</button><!-- onclick="countMin()"-->
+<button id="two">停止</button><!-- onclick="clearTimeout(Timer1)"-->
+<input type="text" id="s"><span> secs </span>
+<button id="three" >继续</button><!--onclick="countSec()"-->
+<button id="four" >停止</button><!--onclick="clearTimeout(Timer2)"-->
+<hr>
+
+<script>
+/*
+let oTitle=document.querySelector('h1');
+let oInput=document.querySelector('input');
+
+oInput.addEventListener('click',clearWord);
+
+function clearWord( ){　
+	setTimeout("oTitle.innerHTML=' '",3000);
+}
+*/
+//----------------------------------------------------------------------
+
+
+/*
+let oText=document.getElementById('box');
+let x=0;
+
+function countNumber(){
+	if(x<20){
+   x+=1;
+   oText.value=x;
+   setTimeout("countNumber()",1000);
+}
+}
+
+countNumber();
+*/
+//---------------------------------------------------------------------------
+/*
+let oMin=document.getElementById('min');
+let OSec=document.getElementById('sec');
+
+let m=-1;
+let s=0;
+let z=0;
+
+countMin();
+countSec();
+
+function countMin(){
+	m+=1;
+	oMin.value=m;
+setTimeout('countMin()',60000);
+
+}
+
+function countSec(){
+	s+=1;
+    z=s%60;
+	OSec.value=z;
+setTimeout('countSec()',1000);
+
+}
+
+*/
+//---------------------------------------关闭定时器-----------------------------
+let oMin=document.getElementById('m');
+let OSec=document.getElementById('s');
+
+let oBtn1=document.getElementById('one');
+let oBtn2=document.getElementById('two');
+let oBtn3=document.getElementById('three');
+let oBtn4=document.getElementById('four');
+
+let x=-1;
+let y=0;
+let z=0;
+let flag1=0;//一个flag智能控制一组操作
+let flag2=0;
+
+countMin();
+countSec();
+//为什么添加监听事件无效？？？ 添加监听事件的时候，后面的函数不加引号，且不需要圆括号！！！！
+oBtn1.addEventListener('click',restart1);
+oBtn2.addEventListener('click',stopCount1);
+
+oBtn3.addEventListener('click',restart2);
+oBtn4.addEventListener('click',stopCount2);
+
+function countMin(){
+	x+=1;
+	oMin.value=x;
+	Timer1=setTimeout('countMin()',1000);
+	flag1=1;
+}
+
+ function stopCount1(){
+ 	clearTimeout(Timer1);
+ 	flag1=0;
+ }
+
+function restart1(){
+	if(flag1===0){
+		countMin();
+	}
+}
+
+function countSec(){
+	y+=1;
+    z=y%60;
+	OSec.value=z;
+    Timer2 =setTimeout('countSec()',1000);
+    flag2=0;
+
+}
+
+
+function stopCount2(){
+ 	clearTimeout(Timer2);
+ 	flag2=1;
+ }
+
+function restart2(){
+	if(flag2===0){
+		countMin();
+	}
+}
+
+</script>
+</body>
+</html>

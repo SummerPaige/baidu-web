@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>20-21</title>
+</head>
+<style>
+    #name,#submit-btn{
+     display:block;
+     margin:20px auto;
+     
+    }
+</style>
+<body>
+
+<input id="name" type="text" >    
+<button id="submit-btn">Submit</button>
+
+
+<script>
+    let  oText=document.getElementById('name');
+    let  oBtn=document.getElementById('submit-btn');
+   
+
+    oBtn.addEventListener('click',myClick);
+    oText.addEventListener('keydown',keyListener);
+    
+    
+    function myClick(){
+      console.log(oText.value);  
+    }
+     
+
+   function keyListener(e){
+        if(e.keyCode==13){
+          console.log(oText.value);   
+      } else if(e.keyCode==27)
+      {
+       
+       oText.value=' '; 
+       
+      }
+    }
+    
+</script>
+</body>
+</html>

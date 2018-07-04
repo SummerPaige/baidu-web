@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">    
+    <title>IFE ECMAScript</title>
+    <style>
+        select {
+            display:none;
+        }
+    </style>
+
+</head>
+<body>   
+<script>
+    window.onload=function(){
+  let oSradio=document.getElementById('school');
+  let oCradio=document.getElementById('company');
+
+  let oSselect=document.getElementById('school-select');
+  let oCselect=document.getElementById('company-select');
+console.log(oSradio);
+console.log(oCradio);
+console.log(oSselect);
+console.log(oCselect);
+
+  
+  oSradio.addEventListener('click',myclick);//后面的函数不需要带括号
+  oCradio.addEventListener('click',myclick);
+
+  function myclick(){
+  if(oSradio.checked){//.checkd就可以判断是否是选中了
+    //alert(oSradio.checked);
+    oSselect.style.cssText='display:inline';
+    oCselect.style.cssText='display:none' ;
+    //alert(oSselect.style.display);
+  }else if(oCradio.checked){
+    
+    oSselect.style.cssText='display:none' ;
+    oCselect.style.cssText='display:inline' ;
+    //alert(oCselect.style.display);
+  }
+
+    
+    }
+}
+</script>         
+    <label>
+        <input id="school" name="status" type="radio">
+        School
+    </label>
+    <label>
+        <input id="company" name="status" type="radio">
+        Company
+    </label>
+
+    <select id="school-select">        
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">        
+        <option>百度</option>
+        <option>爱奇艺</option>        
+    </select>
+</body>
+</html>

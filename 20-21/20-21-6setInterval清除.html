@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>淡入淡出</title>
+</head>
+
+<style>
+ div{
+  width:300px;
+  height:300px;
+  background:#000;
+  
+  }
+</style>
+
+<body>
+
+<div id="fade-obj" ></div>
+<button id="fade-btn">淡出</button>
+
+<script>
+window.onload=function(){
+  let oDiv=document.getElementById('fade-obj');
+  let OBtn=document.getElementById('fade-btn');
+  oDiv.style.cssText='opacity:1';
+
+  let p=getComputedStyle(oDiv).opacity;
+  //let p=oDiv.style.opacity;
+  //element.style 读取的只是元素的“内联样式”，即 写在元素的 style 属性上的样式；而 getComputedStyle 读取的样式是最终样式，包括了“内联样式”、“嵌入样式”和“外部样式”。
+  
+  let flag=0;
+  let timer1;
+  let timer2;
+  
+  OBtn.addEventListener('click',fade);
+
+
+  function fade(){
+  if(flag==0){
+  fadeOut();
+  }else{
+  fadeIn();
+ }
+   }
+
+
+
+  function fadeOut(){
+ 
+   OBtn.innerHTML='淡出';
+   console.log(p);
+   p=p-0.1;
+   oDiv.style.opacity=p;
+   clearInterval(timer1);
+   timer1=setInterval(fadeOut,1000);
+   //alert(p);
+    if(p<=0){
+      //alert(1);
+    clearInterval(timer1);
+    //alert(timer1);
+    flag=1;
+      //alert(flag);
+    OBtn.innerHTML='淡入';
+    }
+}
+
+
+
+function fadeIn(){
+   OBtn.innerHTML='淡入';
+   p=p+0.1;
+   oDiv.style.opacity=p;
+   clearInterval(timer2);
+   timer2=setInterval(fadeIn,1000);
+   if(p>=1){
+      //alert(1);
+      clearInterval(timer2);
+      flag=0;
+      OBtn.innerHTML='淡出';
+    }
+
+}
+
+
+
+
+
+}
+
+
+</script>
+</body>
+</html>

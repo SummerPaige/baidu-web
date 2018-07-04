@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>淡入淡出</title>
+</head>
+
+<style>
+ div{
+  width:300px;
+  height:300px;
+  background:#000;
+  
+  }
+</style>
+
+<body>
+
+<div id="fade-obj" ></div>
+<button id="fade-btn">淡出</button>
+
+<script>
+window.onload=function(){
+  let oDiv=document.getElementById('fade-obj');
+  let OBtn=document.getElementById('fade-btn');
+  oDiv.style.cssText='opacity:1';
+
+  let p=oDiv.style.opacity;
+  let flag=0;
+  let timer1;
+  let timer2;
+  
+  OBtn.addEventListener('click',fade);
+
+
+
+  function fade(){
+  if(flag==0){
+  fadeOut();
+  }else{
+  fadeIn();
+ }
+   }
+
+
+
+  function fadeOut(){
+ 
+   OBtn.innerHTML='淡出';
+   p=p-0.1;
+   oDiv.style.opacity=p;
+
+ //clearTimeout(timer1);如果使用setTimeout(),执行一次就自己关掉了。就不用先关掉。
+   timer1=setTimeout(fadeOut,1000);
+   //alert(p);
+    if(p<0){
+      //alert(1);
+    clearTimeout(timer1);
+    //alert(timer1);
+    flag=1;
+      //alert(flag);
+    OBtn.innerHTML='淡入';
+    }
+}
+
+
+
+  function fadeIn(){
+   OBtn.innerHTML='淡入';
+   p=p+0.1;
+   oDiv.style.opacity=p;
+
+   //clearTimeout(timer2);
+    timer2=setTimeout(fadeIn,1000);
+   if(p>=1){
+      //alert(1);
+     clearTimeout(timer2);
+      flag=0;
+      OBtn.innerHTML='淡出';
+    }
+
+}
+
+
+
+
+
+}
+
+
+</script>
+</body>
+</html>
